@@ -1,0 +1,172 @@
+[
+  {
+    "name": "guest_id_marketing",
+    "value": "v1%3A172986935881966785",
+    "domain": ".twitter.com",
+    "path": "/",
+    "expires": 1764429358.852041,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "guest_id_ads",
+    "value": "v1%3A172986935881966785",
+    "domain": ".twitter.com",
+    "path": "/",
+    "expires": 1764429358.85219,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "personalization_id",
+    "value": "\"v1_bSfVlem5npYkzYojTbL0pA==\"",
+    "domain": ".twitter.com",
+    "path": "/",
+    "expires": 1764429358.85223,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "guest_id",
+    "value": "v1%3A172986935881966785",
+    "domain": ".twitter.com",
+    "path": "/",
+    "expires": 1764429358.852274,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "night_mode",
+    "value": "2",
+    "domain": ".x.com",
+    "path": "/",
+    "expires": 1762943856.369013,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "kdt",
+    "value": "EyKRoTe1TzkI7QEFyblh4kjKEXWZMLAIQprvV1jx",
+    "domain": ".x.com",
+    "path": "/",
+    "expires": 1765522584.978108,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "lang",
+    "value": "en",
+    "domain": "x.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "personalization_id",
+    "value": "\"v1_bSfVlem5npYkzYojTbL0pA==\"",
+    "domain": ".x.com",
+    "path": "/",
+    "expires": 1761405366.338244,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "dnt",
+    "value": "1",
+    "domain": ".x.com",
+    "path": "/",
+    "expires": 1765522584.978073,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "NID",
+    "value": "519=bdPrq32As1oleDFRbgVJhTbOAxPew57hGYB9ifZhmPaT3-inSQHWrJJ-EP-Oht77lfU2Oljq4sBkMCK5QoMKw-gf5o3VUVxUJljZ_J1FqH1T6uTAhL56mbo0yJEMaAX8rXXBeAaXTnDayF5MNtbWeOX_CHupqu3nq_ZRXYUT77G3S5a27N8LMW-I4A",
+    "domain": ".google.com",
+    "path": "/",
+    "expires": 1746773784.522624,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "auth_token",
+    "value": "b1433b4a06eabf89ab287dfa71820271dc9ebf3c",
+    "domain": ".x.com",
+    "path": "/",
+    "expires": 1765522584.978252,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "guest_id",
+    "value": "v1%3A173096258503107058",
+    "domain": ".x.com",
+    "path": "/",
+    "expires": 1765522585.133671,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "ct0",
+    "value": "41a94d7183064e92e0127787ff52c3572550447c8969f7f6b5e94da30acb187ca60fdcd8399cfc77bbeda259ad0d5432abd0f94ec794d59d76961451882f1a47e71dc273da2e61a7229af606f93d696e",
+    "domain": ".x.com",
+    "path": "/",
+    "expires": 1765522585.1338,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "guest_id_ads",
+    "value": "v1%3A173096258503107058",
+    "domain": ".x.com",
+    "path": "/",
+    "expires": 1765967857.0687,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "guest_id_marketing",
+    "value": "v1%3A173096258503107058",
+    "domain": ".x.com",
+    "path": "/",
+    "expires": 1765967857.068741,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "twid",
+    "value": "u%3D1692041470486675457",
+    "domain": ".x.com",
+    "path": "/",
+    "expires": 1762943857.068761,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "IDE",
+    "value": "AHWqTUmfQKqHedbnGYIo5xyw9i8FpZSnb22ZVuyTYY3ww0udxQH3YLnoZ5HmOKGtaq8",
+    "domain": ".doubleclick.net",
+    "path": "/",
+    "expires": 1765901813.88457,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  }
+]
