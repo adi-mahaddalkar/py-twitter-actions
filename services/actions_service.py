@@ -4,8 +4,8 @@ import logging
 import os
 import uuid
 from typing import Optional, List, Set
-import pandas as pd
 
+import pandas as pd
 from playwright.async_api import Page, async_playwright
 
 logging.basicConfig(level=logging.DEBUG)
@@ -45,6 +45,35 @@ async def scroll_n_times(page: Page, n: int, delay_ms: int | float = 1000) -> No
 class ActionsService:
     def __init__(self):
         os.makedirs(DATA_FOLDER, exist_ok=True)
+
+    async def sign_up_with_google(self,
+                                  page: Page,
+                                  google_email: str,
+                                  google_password: str):
+
+        try:
+
+            await page.goto('https://x.com/i/flow/signup')
+            await page.wait_for_timeout(5.6 * 1000)
+
+            await page.locator('''//span[contains(text(), 'Sign up with Google')]''').click()
+            await page.wait_for_timeout(4.3 * 1000)
+
+            await page.wait_for_url("https://accounts.google.com/*")
+
+            # Fill in the email field and click Next
+            await page.fill("input[type='email']", google_email)
+            await page.click("button:has-text('Next')")
+
+            # Wait for the password field and fill it in
+            await page.wait_for_selector("input[type='password']")
+            await page.fill("input[type='password']", google_password)
+            await page.click("button:has-text('Next')")
+
+            await page.pause()
+
+        except Exception as e:
+            logging.error(f'Error in signing up with Google', exc_info=e)
 
     async def login(self,
                     page: Page,
@@ -94,7 +123,8 @@ class ActionsService:
                         await tweet.focus()
                         await page.wait_for_timeout(3.1 * 1000)
                         is_before_string = 'before' if is_before else 'after'
-                        await page.screenshot(path=os.path.join(DATA_FOLDER, f'fyp-{is_before_string}-{scroll}-{idx}.png'))
+                        await page.screenshot(
+                            path=os.path.join(DATA_FOLDER, f'fyp-{is_before_string}-{scroll}-{idx}.png'))
                     except Exception as e:
                         logging.error(f'Error while saving tweet screenshot on FYP', exc_info=e)
 
@@ -200,7 +230,12 @@ class ActionsService:
             logging.error(f'Error in extracting tweet links from page', exc_info=e)
             return None
 
-    async def run(self, username: str, password: str, tweet_links: Optional[List[str]]):
+    async def run(self,
+                  username: str,
+                  password: str,
+                  tweet_links: Optional[List[str]],
+                  google_email: str,
+                  google_password: str):
 
         _id = uuid.uuid4().__str__()
 
@@ -224,6 +259,12 @@ class ActionsService:
             else:
                 page = await context.new_page()
                 await self.login(page=page, username=username, password=password)
+
+            await self.sign_up_with_google(
+                page=page,
+                google_email=google_email,
+                google_password=google_password
+            )
 
             await self.scroll_through_home_page(page=page, links_output_filename=f'{_id}_before.csv', is_before=True)
 
@@ -257,5 +298,7 @@ if __name__ == '__main__':
     loop.run_until_complete(ActionsService().run(
         username='IlyasSilva11341',
         password='Silva+Ilyas13',
-        tweet_links=tweets
+        tweet_links=tweets,
+        google_email='barry.smith.8530@gmail.com',
+        google_password='Dallas$$00'
     ))
